@@ -1,13 +1,9 @@
 
 package com.dkosko.handler;
 
-import com.dkosko.io.InputOutput;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,95 +14,26 @@ public class NaturalNumberHandlerTest {
     public NaturalNumberHandlerTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    
     @Test
-    public void testCreateNumbers() {
-        
-    }
-
-    
-    @Test
-    public void testConcatElementToList() {
+    public void testConcatElementToList_addsElementToEmptyList() {
         NaturalNumberHandler naturalNumberHandler = new NaturalNumberHandler();
-        List<String> example = new ArrayList();
-        example.add("1");
-        List<String> result = naturalNumberHandler.createNumbers(example);
-        assertFalse(result.isEmpty());
+        String testElement = "x";
+        NaturalNumberHandler.concatElementToList(testElement);
+        assertTrue(naturalNumberHandler.getCombinations().contains(testElement));
     }
 
-    
     @Test
-    public void testCombineX0andZ() {
+    public void testConcatElementToList_concatsElementToAllListElements() {
         NaturalNumberHandler naturalNumberHandler = new NaturalNumberHandler();
-        List<String> example = new ArrayList();
-        example.add("10");
-        example.add("1");
-        List<String> result = naturalNumberHandler.createNumbers(example);
-        assertTrue(result.size() == 1);
-    }
-
-    
-    @Test
-    public void testCombineX00andY0andZ() {
-        
-    }
-
-    
-    @Test
-    public void testCaseLengthTwo() {
-        
-    }
-
-    
-    @Test
-    public void testCaseLengthThree() {
-        
-    }
-
-    
-    @Test
-    public void testCombineXYZ() {
-        
-    }
-
-    
-    @Test
-    public void testCombineXY0andZ() {
-        
-    }
-
-    
-    @Test
-    public void testCombineX1Y() {
-        
-    }
-
-    
-    @Test
-    public void testCombineXY() {
-        
-    }
-
-    
-    @Test
-    public void testPossibleResults() {
-        
+        List<String> testCombinations = new ArrayList<>();
+        testCombinations.addAll(Arrays.asList("a", "b", "c"));
+        naturalNumberHandler.setCombinations(testCombinations);
+        String testElement = "x";
+        NaturalNumberHandler.concatElementToList(testElement);
+        assertTrue(naturalNumberHandler.getCombinations().contains("a" + testElement));
+        assertTrue(naturalNumberHandler.getCombinations().contains("b" + testElement));
+        assertTrue(naturalNumberHandler.getCombinations().contains("b" + testElement));
+        assertEquals(testCombinations.size(), naturalNumberHandler.getCombinations().size());
     }
     
 }
