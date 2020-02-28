@@ -2,11 +2,11 @@ package com.dkosko.handler;
 
 import java.util.ArrayList;
 import java.util.List;
+import static com.dkosko.handler.CombinationsUtility.*;
 
 public class NaturalNumberHandler {
 
     private static List<String> combinations = new ArrayList<String>();
-    private static final CombinationsUtility UTIL = new CombinationsUtility();
 
     public NaturalNumberHandler() {
     }
@@ -56,41 +56,42 @@ public class NaturalNumberHandler {
             concatElementToList(input.remove(0));
         } else if (input.get(0).substring(1, 2).equals("0")) {
             if (1 < input.size() && input.get(1).length() == 1) {
-                possibleResults(UTIL.combineX0andZ(input.remove(0), input.remove(0)));
+                possibleResults(combineX0andZ(input.remove(0), input.remove(0)));
             } else {
                 concatElementToList(input.remove(0));
             }
         } else {
-            possibleResults(UTIL.combineXY(input.remove(0)));
+            possibleResults(combineXY(input.remove(0)));
         }
     }
 
     protected static void caseLengthThree(List<String> input) {
         if (input.get(0).substring(1, 3).equals("00")) {
             if (1 < input.size() && input.get(1).length() == 1) {
-                possibleResults(UTIL.combineX0andZ(input.remove(0), input.remove(0)));
+                possibleResults(combineX0andZ(input.remove(0), input.remove(0)));
             } else if (1 < input.size() && input.get(1).length() == 2) {
                 if ((input.get(1).substring(1, 2).equals("0") || input.get(1).substring(1, 2).equals("1"))
                         && 2 < input.size() && input.get(2).length() == 1) {
-                    possibleResults(UTIL.combineX00andY0andZ(input.remove(0), input.remove(0), input.remove(0))
+                    possibleResults(
+                            combineX00andY0andZ(input.remove(0), input.remove(0), input.remove(0))
                     );
                 }else if(input.get(1).substring(1, 2).equals("0")){
-                    possibleResults(UTIL.combineX00andY0(input.remove(0), input.remove(0)));
+                    possibleResults(combineX00andY0(input.remove(0), input.remove(0)));
                 } else {
-                    possibleResults(UTIL.combineX00andYZ(input.remove(0), input.remove(0)));
+                    possibleResults(combineX00andYZ(input.remove(0), input.remove(0)));
                 }
             } else {
                 concatElementToList(input.remove(0));
             }
         } else if (input.get(0).substring(2, 3).equals("0")&& !input.get(0).substring(1,2).equals("1") 
                     && 1 < input.size() && input.get(1).length() == 1) {
-            possibleResults(UTIL.combineXY0andZ(input.remove(0), input.remove(0)));
+            possibleResults(combineXY0andZ(input.remove(0), input.remove(0)));
         } else if (input.get(0).substring(1, 2).equals("1") && 1 <= input.size()) {
-            possibleResults(UTIL.combineXY0orX1Y(input.remove(0)));
+            possibleResults(combineXY0orX1Y(input.remove(0)));
         } else if (input.get(0).substring(2, 3).equals("0")) {
-            possibleResults(UTIL.combineXY0orX1Y(input.remove(0)));
+            possibleResults(combineXY0orX1Y(input.remove(0)));
         } else {
-            possibleResults(UTIL.combineXYZ(input.remove(0)));
+            possibleResults(combineXYZ(input.remove(0)));
         }
     }
 
