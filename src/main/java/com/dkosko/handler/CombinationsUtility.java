@@ -62,14 +62,16 @@ public class CombinationsUtility {
         combinations.add(xy);
         return combinations;
     }
-
+    
+    //Sample inputs: 100 40, 300 90
     protected static List<String> combineX00andY0(String x00, String y0){
         List<String> combinations = new ArrayList();
         combinations.add(x00 + y0);
         combinations.add(x00.substring(0,1) + y0);
         return combinations;
     }
-
+    
+    //Sample inputs: 100 23, 600 66
     protected static List<String> combineX00andYZ(String x00, String yz){
         List<String> combinations = new ArrayList();
         combinations.addAll(combineX00andY0(x00, yz));

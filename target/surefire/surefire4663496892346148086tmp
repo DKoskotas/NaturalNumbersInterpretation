@@ -1,8 +1,0 @@
-#surefire
-#Thu Feb 27 12:24:31 EET 2020
-maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
-user.dir=C\:\\Users\\jimmi\\NetbeansProjects\\NaturalNumbersInterpretation
-file.encoding=UTF-8
-localRepository=C\:\\Users\\jimmi\\.m2\\repository
-basedir=C\:\\Users\\jimmi\\NetbeansProjects\\NaturalNumbersInterpretation
-test=com.dkosko.io.InputOutputTest\#testRequestInput

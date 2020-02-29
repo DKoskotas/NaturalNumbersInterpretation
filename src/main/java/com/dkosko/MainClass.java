@@ -13,7 +13,7 @@ public class MainClass {
         InputOutput io = new InputOutput();
         List<String> input = io.requestInput();
         NaturalNumberHandler naturalNumberHandler = new NaturalNumberHandler();
-        io.checkNumber(naturalNumberHandler.createNumbers(input)); 
+        io.printNumbers(naturalNumberHandler.createNumbers(input)); 
            
     }
 }

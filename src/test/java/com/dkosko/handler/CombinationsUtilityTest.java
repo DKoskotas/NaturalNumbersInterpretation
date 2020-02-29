@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 
 public class CombinationsUtilityTest {
     
+    //Test method for combineX0andZ()
     @Test
     public void testCombineX0andZ() {
         String x0 = "X0";
@@ -17,6 +18,7 @@ public class CombinationsUtilityTest {
         assertEquals(2, combinations.size());
     }
     
+    //Test method for combineX00andY0andZ()
     @Test
     public void testCombineX00andY0andZ(){
         String x00 = "X00";
@@ -30,6 +32,7 @@ public class CombinationsUtilityTest {
         assertEquals(4, combinations.size());
     }
     
+    //Test method for combineXYZ()
     @Test
     public void testCombineXYZ(){
         String xyz = "XYZ";
@@ -41,6 +44,7 @@ public class CombinationsUtilityTest {
         assertEquals(4, combinations.size());
     }
     
+    //Test method for combineXY0andZ()
     @Test
     public void testCombineXY0andZ(){
         String xy0 = "XY0";
@@ -52,20 +56,27 @@ public class CombinationsUtilityTest {
         assertEquals(3, combinations.size());
     }
     
+    //Test method for combineXY0orX1Y() in case input is XY0
     @Test
-    public void testCombineXY0orX1Y(){
+    public void testCombineXY0(){
         String xy0 = "XY0";
-        String x1y = "X1Y";
         List<String> combinationsXY0 = CombinationsUtility.combineXY0orX1Y(xy0);
         assertTrue(combinationsXY0.contains("X00Y0"));
         assertTrue(combinationsXY0.contains("XY0"));
         assertEquals(2, combinationsXY0.size());
+    }
+    
+    //Test method for combineXY0orX1Y() in case input is X1Y
+    @Test
+    public void testCombineX1Υ(){
+        String x1y = "X1Y";
         List<String> combinationsX1Y = CombinationsUtility.combineXY0orX1Y(x1y);
         assertTrue(combinationsX1Y.contains("X001Y"));
         assertTrue(combinationsX1Y.contains("X1Y"));
-        assertEquals(2, combinationsX1Y.size());        
+        assertEquals(2, combinationsX1Y.size());  
     }
     
+    //Test method for combineΧΥ()
     @Test
     public void testCombineXY(){
        String xy = "XY";
@@ -75,6 +86,7 @@ public class CombinationsUtilityTest {
        assertEquals(2, combinations.size());
     }
     
+    //Test method for combineΧ00andY0()
     @Test
     public void testCombineX00andY0(){
        String x00 = "X00";
@@ -85,6 +97,7 @@ public class CombinationsUtilityTest {
        assertEquals(2, combinations.size());
     }
     
+    //Test method for combineX00andYZ()
     @Test
     public void testCombineX00andYZ(){
         String x00 = "X00";
