@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="com.dkosko.handler.NaturalNumberHandlerTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="com.dkosko.handler.NaturalNumberHandlerTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -62,14 +62,17 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputXY0andZ" time="0"/>
+  <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testConcatElementToList_addsElementToEmptyList" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputX00andY0andZ" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthTwo_input1X" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthTwo_inputXY" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testConcatElementToList_concatsElementToAllListElements" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputX00andY0" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputX00andYZ" time="0"/>
+  <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testPossibleResults_addsInputToEmptyList" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputX1Z" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputXY0" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthTwo_inputX0andY" time="0"/>
+  <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testPossibleResults_addsInputToList" time="0"/>
   <testcase classname="com.dkosko.handler.NaturalNumberHandlerTest" name="testCaseLengthThree_inputX00andZ" time="0"/>
 </testsuite>
