@@ -14,14 +14,6 @@ public class NaturalNumberHandlerTest {
     public NaturalNumberHandlerTest() {
     }
     
-    //Test in case the list is empty
-//    @Test
-//    public void testConcatElementToList_addsElementToEmptyList() {
-//        NaturalNumberHandler naturalNumberHandler = new NaturalNumberHandler();
-//        String testElement = "x";
-//        NaturalNumberHandler.concatElementToList(testElement);
-//        assertTrue(naturalNumberHandler.getCombinations().contains(testElement));
-//    }
     
     //Test in case the list is not empty 
     @Test
@@ -161,23 +153,5 @@ public class NaturalNumberHandlerTest {
         assertTrue(naturalNumberHandler.getCombinations().contains("X1Z"));
     }
     
-    //Testing possibleResults if the combinations is empty
-//    @Test
-//    public void testPossibleResults_addsInputToEmptyList(){
-//        NaturalNumberHandler naturalNumberHandler = new NaturalNumberHandler();
-//        List<String> testCombinations = new ArrayList();
-//        testCombinations.addAll(Arrays.asList("XYZ", "XY", "Z"));
-//        NaturalNumberHandler.possibleResults(testCombinations);
-//        assertEquals(3, naturalNumberHandler.getCombinations().size());
-//    }
     
-    //Testing possibleResults if combinations is not empty
-//    @Test
-//    public void testPossibleResults_addsInputToList(){
-//        NaturalNumberHandler naturalNumberHandler = new NaturalNumberHandler();
-//        List<String> testCombinations = new ArrayList();
-//        testCombinations.addAll(Arrays.asList("XYZ", "XY", "Z"));
-//        NaturalNumberHandler.possibleResults(testCombinations);
-//        assertEquals(3, naturalNumberHandler.getCombinations().size());
-//    }
 }
